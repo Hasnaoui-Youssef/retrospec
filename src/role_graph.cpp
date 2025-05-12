@@ -83,7 +83,6 @@ void RoleGraph::generateViz(const string& filename){
 
 void RoleGraph::get_user_grants(string node, vector<string>& uGrants){
     if(users.find(node) == users.end()) return;
-    cout << "Grants for user : " << node << "\n";
     set<string> visited;
     std::deque<string> q;
     q.push_back(node);
@@ -91,7 +90,7 @@ void RoleGraph::get_user_grants(string node, vector<string>& uGrants){
         string n = q.front();
         q.pop_front();
         if(visited.find(n) != visited.end()){
-            cout << "Node already visited!\n";
+            cout << "Node " << n << " already visited!\n";
             continue;
         }
         visited.insert(n);
@@ -103,6 +102,10 @@ void RoleGraph::get_user_grants(string node, vector<string>& uGrants){
             for(int i = 0; i < user_grants[n].size(); ++i) uGrants.push_back(user_grants[n][i]);
         }
     }
+}
+
+bool RoleGraph::hasUser(string user){
+    return users.find(user) != users.end();
 }
 
 //This function assumes we have a coherent  adjacency list

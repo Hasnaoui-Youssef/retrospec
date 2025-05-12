@@ -24,6 +24,7 @@ class RoleGraph{
 public:
     void addEdge(const string& from, const string& to, const bool is_admin);
     bool detectCircularDependencies(vector<vector<string>>& cycles);
+    bool hasUser(string user);
     void generateViz(const string& filename = "graph");
     void addUser(string& user);
     void setGrants(unordered_map<string, vector<string>>&);
