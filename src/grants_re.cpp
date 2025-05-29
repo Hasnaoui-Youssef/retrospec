@@ -92,7 +92,7 @@ void GrantStatement::logInfo(){
 }
 
 
-void GrantStatement::toJson(string filename){
+std::string GrantStatement::toJson(){
     std::stringstream json;
     json << "{";
     json << "\"type\" : \"" << this->op << "\",";
@@ -117,4 +117,5 @@ void GrantStatement::toJson(string filename){
     json << "\"user\" : \"" << this->user << "\",";
     json << "\"host\" : \"" << this->host << "\"";
     json << "}";
+    return json.str();
 }

@@ -15,9 +15,9 @@ using std::set;
 
 
 class RoleGraph{
-    unordered_map<string, vector<string>> adj_list;
-    unordered_map<string, vector<string>> user_grants;
-    set<string> users;
+    std::unordered_map<std::string, std::vector<std::string>> adj_list;
+    std::unordered_map<std::string, std::vector<std::string>> user_grants;
+    std::set<std::string> users;
 
     bool hasCycle(const string& node, set<string>& visited, set<string>& recStack, vector<string>& cyclePath);
 

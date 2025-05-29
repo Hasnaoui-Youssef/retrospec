@@ -22,5 +22,5 @@ class GrantStatement {
 public:
     GrantStatement(const string&);
     void logInfo();
-    void toJson(string);
+    std::string toJson();
 };

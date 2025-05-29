@@ -43,14 +43,13 @@ RoleGraph MySqlAnalyzer::buildRoleGraph(){
     return graph;
 }
 
-unordered_map<string,vector<std::string>> MySqlAnalyzer::getGrants(){
-    unordered_map<string, vector<std::string>> grants;
+std::unordered_map<std::string,std::vector<std::string>> MySqlAnalyzer::getGrants(){
+    std::unordered_map<std::string, std::vector<std::string>> grants;
     std::ifstream query_file("queries/mysql_grants_re.sql");
     std::stringstream ss;
     ss << query_file.rdbuf();
     std::string query = ss.str();
     if(mysql_query(conn, query.c_str())){
-        std::cout << "Query : " << query << "\n";
         throw std::runtime_error("Failed to query grants : " + std::string(mysql_error(conn)));
     }
 

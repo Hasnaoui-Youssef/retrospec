@@ -90,7 +90,6 @@ void RoleGraph::get_user_grants(string node, vector<string>& uGrants){
         string n = q.front();
         q.pop_front();
         if(visited.find(n) != visited.end()){
-            cout << "Node " << n << " already visited!\n";
             continue;
         }
         visited.insert(n);

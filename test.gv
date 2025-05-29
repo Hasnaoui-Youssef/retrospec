@@ -1,0 +1,40 @@
+digraph MySQLRoleGraph {
+    // Graph styling
+    rankdir="LR"; // Draw from bottom to top (hierarchy)
+    node [shape=box, style=filled, fillcolor=whitesmoke];
+    edge [color="#616161", arrowhead="vee"];
+
+    // System Admins
+    "db_admin" -> "super_admin";
+    "security_admin" -> "super_admin";
+
+    // Department Admins
+    "finance_admin" -> "db_admin";
+    "hr_admin" -> "db_admin";
+    "dev_admin" -> "db_admin";
+
+    // Functional Roles
+    "reporting_lead" -> "finance_admin";
+    "backup_operator" -> "db_admin";
+    "auditor" -> "security_admin";
+
+    // Application Roles
+    "erp_writer" -> "erp_reader";
+    "crm_writer" -> "crm_reader";
+    "erp_reader" -> "finance_reader";
+    "crm_reader" -> "hr_reader";
+
+    // Read-Only Roles
+    "finance_reader" -> "finance_admin";
+    "hr_reader" -> "hr_admin";
+    "dev_reader" -> "dev_admin";
+
+    // Restricted Roles
+    "intern" -> "dev_reader";
+    "guest" -> "hr_reader";
+    "api_client" -> "erp_reader";
+
+    // Cross-Department Permissions
+    "reporting_lead" -> "hr_reader" [color="#757575"];
+    "auditor" -> "finance_reader" [color="#757575"];
+}

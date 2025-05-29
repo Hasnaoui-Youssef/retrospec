@@ -1,0 +1,60 @@
+{
+    "DBMS" : "MySQL",
+    "server" :  "0.0.0.0",
+    "connectedUser" : "root",
+    "port" : "3306",
+    "userGrants" : {
+        "youssef" : [
+            {
+                "type" : "GRANT",
+                "privs" : [
+                    {
+                        "name" : "SELECT",
+                        "cols" : ["ALL"]
+                    }
+                ],
+                "database" : "youssef",
+                "table" : "cars",
+                "user" : "youssef"
+            }        ],
+        "student" : [
+            {
+                "type" : "REVOKE",
+                "privs" : [
+                    {
+                        "name" : "DELETE",
+                        "cols" : ["year"]
+                    }
+                ],
+                "database" : "youssef",
+                "table" : "cars",
+                "user" : "student"
+            },
+            {
+                "type" : "REVOKE",
+                "privs" : [
+                    {
+                        "name" : "DELETE",
+                        "cols" : ["year"]
+                    }
+                ],
+                "database" : "youssef",
+                "table" : "cars",
+                "user" : "student"
+            },
+            {
+                "type" : "REVOKE",
+                "privs" : [
+                    {
+                        "name" : "DELETE",
+                        "cols" : ["year"]
+                    }
+                ],
+                "database" : "youssef",
+                "table" : "cars",
+                "user" : "student"
+            }
+        ],
+        "teacher" : []
+    }
+}
