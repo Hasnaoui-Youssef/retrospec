@@ -97,6 +97,7 @@ std::string GrantStatement::toJson(){
     json << "{";
     json << "\"type\" : \"" << this->op << "\",";
     json << "\"privs\" : [ ";
+    int counter = 0;
     for(auto& p : this->privs){
         json << "{";
         json << "\"name\" : \"" << p.first << "\"," ;
@@ -108,8 +109,8 @@ std::string GrantStatement::toJson(){
                 json << "\"" << c << ((c == p.second.back()) ? "\"" : "\",");
             }
         }
-        json << "]";
-        json << (p.first == this->privs.back().first ? "" : "");
+        json << "]}";
+        json << (counter++ == this->privs.size() - 1? "" : ",");
     }
     json << "],";
     json << "\"database\" : \"" << this->db << "\",";

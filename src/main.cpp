@@ -31,7 +31,7 @@ void generateReport(std::unordered_map<std::string, std::vector<GrantStatement>>
             json << ",";
         }
         firstMapEntry = false;
-        json << "\""<< p.first <<"\" : \"" << "[";
+        json << "\""<< p.first <<"\" : " << "[";
         bool firstGrantEntry = true;
         for(auto& g : p.second){
             if(!firstGrantEntry){
