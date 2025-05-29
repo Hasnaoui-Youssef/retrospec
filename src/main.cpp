@@ -67,7 +67,6 @@ int main(int argc, char* argv[]){
     }
     graph.setGrants(grants);
     unordered_map<string, vector<GrantStatement>> grantObjects;
-    generateReport(grantObjects,host, user, port, "Report_testing.json");
     for(auto& s : grants){
         if(graph.hasUser(s.first)){
             graph.get_user_grants(s.first, s.second);
@@ -76,6 +75,7 @@ int main(int argc, char* argv[]){
             }
         }
     }
+    generateReport(grantObjects,host, user, port, "Report_testing.json");
 
 
     return 0;
