@@ -74,7 +74,7 @@ void RoleGraph::generateViz(const string& filename){
     }
     dotFile << "}\n";
     dotFile.close();
-    cout << "Graphviz file generated : " << filename << ".gv";
+    cout << "Graphviz file generated : " << filename << ".gv\n";
     string command =  "dot -Tpng " + filename + ".gv -o "+ filename + ".png";
     cout << "Running \"" << command << "\"\n";
     system(command.c_str());

@@ -16,7 +16,7 @@ using std::unordered_map;
 
 void generateReport(std::unordered_map<std::string, std::vector<GrantStatement>> grantObjects,
         std::string host, std::string user,
-        std::string port, std::string fileName="report.json"){
+        std::string port, std::string fileName="report"){
 
     std::stringstream json;
     json << "{";
@@ -37,14 +37,19 @@ void generateReport(std::unordered_map<std::string, std::vector<GrantStatement>>
             if(!firstGrantEntry){
                 json << ",";
             }
+            firstGrantEntry = false;
             json << g.toJson();
         }
         json << "]";
     }
     json << "}}";
-    std::ofstream of(fileName);
+    string extFN = fileName + ".json";
+    std::ofstream of(extFN);
     of << json.str();
     of.close();
+    string cmd = "node -e \"console.log(JSON.stringify(require('./" + extFN + "'), null, 2))\" > " + fileName+ "_fmt.json";
+    system(cmd.c_str());
+    cout << "JSON report file generated : " << fileName << "_fmt.json\n";
 }
 
 int main(int argc, char* argv[]){
@@ -75,7 +80,7 @@ int main(int argc, char* argv[]){
             }
         }
     }
-    generateReport(grantObjects,host, user, port, "Report_testing.json");
+    generateReport(grantObjects,host, user, port, "Report_testing");
 
 
     return 0;
