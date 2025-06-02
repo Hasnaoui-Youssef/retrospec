@@ -1,0 +1,1358 @@
+{
+  "DBMS": "MySQL",
+  "server": "0.0.0.0",
+  "connectedUser": "root",
+  "port": "3306",
+  "userGrants": {
+    "db_admin": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "id",
+              "amount"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "db_admin"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "finance_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "id",
+              "date"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "hr_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "hr_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "backup_operator"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "clients",
+        "user": "intern"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "amount",
+              "amount"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "hr_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "id",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "hr_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "crm_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "guest"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "guest"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "amount"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "erp_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "erp_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "api_client"
+      }
+    ],
+    "super_admin": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "inventory",
+        "user": "super_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "name",
+              "date"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "super_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "id",
+              "amount"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "db_admin"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "security_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "name",
+              "name"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "security_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "name",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "auditor"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "finance_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "id",
+              "date"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "hr_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "hr_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "backup_operator"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "clients",
+        "user": "intern"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "amount",
+              "amount"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "hr_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "id",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "hr_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "crm_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "guest"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "guest"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "amount"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "erp_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "erp_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "api_client"
+      }
+    ],
+    "security_admin": [
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "security_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "name",
+              "name"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "security_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "name",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "auditor"
+      }
+    ],
+    "finance_admin": [
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "finance_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "amount"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "erp_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "erp_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "api_client"
+      }
+    ],
+    "hr_admin": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "id",
+              "date"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "hr_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "hr_admin"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "amount",
+              "amount"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "hr_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "id",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "hr_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "crm_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "guest"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "guest"
+      }
+    ],
+    "dev_admin": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_admin"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "clients",
+        "user": "intern"
+      }
+    ],
+    "reporting_lead": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "reporting_lead"
+      }
+    ],
+    "backup_operator": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "backup_operator"
+      }
+    ],
+    "auditor": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "name",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "auditor"
+      }
+    ],
+    "erp_writer": [],
+    "erp_reader": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "amount"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "erp_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "erp_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "api_client"
+      }
+    ],
+    "crm_writer": [],
+    "crm_reader": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "crm_reader"
+      }
+    ],
+    "finance_reader": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "amount"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "orders",
+        "user": "erp_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "erp_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "api_client"
+      }
+    ],
+    "hr_reader": [
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "amount",
+              "amount"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "contacts",
+        "user": "hr_reader"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "id",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "hr_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "crm_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "guest"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "guest"
+      }
+    ],
+    "dev_reader": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "dev_reader"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "clients",
+        "user": "intern"
+      }
+    ],
+    "intern": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "date",
+              "date"
+            ]
+          }
+        ],
+        "database": "crm",
+        "table": "clients",
+        "user": "intern"
+      }
+    ],
+    "guest": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "date",
+              "id"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "tasks",
+        "user": "guest"
+      },
+      {
+        "type": "REVOKE",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "amount",
+              "id"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "guest"
+      }
+    ],
+    "api_client": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "transactions",
+        "user": "api_client"
+      }
+    ],
+    "hr_reader ": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "SELECT",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "finance",
+        "table": "accounts",
+        "user": "reporting_lead"
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "UPDATE",
+            "cols": [
+              "ALL"
+            ]
+          }
+        ],
+        "database": "hr",
+        "table": "salaries",
+        "user": "reporting_lead"
+      }
+    ],
+    "finance_reader ": [
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "INSERT",
+            "cols": [
+              "name",
+              "name"
+            ]
+          }
+        ],
+        "database": "erp",
+        "table": "inventory",
+        "user": "finance_reader "
+      },
+      {
+        "type": "GRANT",
+        "privs": [
+          {
+            "name": "DELETE",
+            "cols": [
+              "name",
+              "amount"
+            ]
+          }
+        ],
+        "database": "dev",
+        "table": "projects",
+        "user": "auditor"
+      }
+    ]
+  }
+}

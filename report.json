@@ -29,30 +29,6 @@
                 "database" : "youssef",
                 "table" : "cars",
                 "user" : "student"
-            },
-            {
-                "type" : "REVOKE",
-                "privs" : [
-                    {
-                        "name" : "DELETE",
-                        "cols" : ["year"]
-                    }
-                ],
-                "database" : "youssef",
-                "table" : "cars",
-                "user" : "student"
-            },
-            {
-                "type" : "REVOKE",
-                "privs" : [
-                    {
-                        "name" : "DELETE",
-                        "cols" : ["year"]
-                    }
-                ],
-                "database" : "youssef",
-                "table" : "cars",
-                "user" : "student"
             }
         ],
         "teacher" : []
